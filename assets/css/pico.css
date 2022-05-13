@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+body{
+    background-color: #1D232A;
+    font-family: 'Open-sans', 'icones', sans-serif;
+    color: #FFFFFF;
+}
+
+.detalhe__pico{
+    padding: 24px 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+}
+
+.detalhe__pico--titulo{
+    font-size: 18px;
+    font-weight: 700;
+    grid-column: span 2;
+}
+
+.detalhe__pico--perfil {
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+
+}
+
+.detalhe__pico--perfil:before{
+    content: '';
+    display: block;
+    background-image: url(../img/profile_2.png);
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 10px;
+}
+
+.detalhe__pico--vis{
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.detalhe__pico--vis:before {
+    content: '\e90f';
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.detalhe__pico--texto{
+    font-size: 16px;
+    font-weight: 400;
+    grid-column: span 2;
+    line-height: 32px;
+}
+
+.detalhe__pico--imagem{
+    grid-column: span 2;
+    width: 100%;
+}
+
+.secao{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .body{
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .detalhe__pico{
+        display: grid;
+        grid-template-columns: auto 352px auto;
+    }
+
+    .detalhe__pico--imagem1, .detalhe__pico--titulo, .detalhe__pico--texto, .detalhe__pico--imagem2{
+        grid-template-columns: span 2;
+    }
+
+    .detalhe__pico--vis{
+        justify-content: flex-end;
+    }
+
+    .detalhe__pico--imagem3{
+        grid-column: 1;
+        grid-row: 7;
+        justify-content: center;
+    }
+
+    .detalhe__pico--imagem4{
+        grid-column: 2;
+        grid-row: 7;
+        justify-content: center;
+    }
+
+    .secao{
+        display: flex;
+        flex-direction: column;
+        grid-column: 3;
+        grid-row: 1/span 9;
+        width: 256px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+}
